@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block extrahead %}
+<title>Главная</title>
+<meta charset="utf-8">
+{% endblock extrahead %}
+
+{% block content %}
+    <p>Какой то текст на главной странице</p>
+    <a href="{% url 'test' %}">Ссылка на другую страницу</a>
+{% endblock %}

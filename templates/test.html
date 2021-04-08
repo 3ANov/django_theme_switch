@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<title>Вторая страница</title>
+<meta charset="utf-8">
+{% endblock extrahead %}
+
+{% block content %}
+    <p>Какой то текст</p>
+    <a href="{% url 'home' %}">Ссылка на главную страницу</a>
+{% endblock %}

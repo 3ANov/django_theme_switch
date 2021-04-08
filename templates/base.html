@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<link href="{% static 'css/light.css' %}" rel="stylesheet" id="theme-link">
+    <script>
+        // Select the button
+        const btn = document.querySelector(".btn-toggle");
+        // Select the stylesheet <link>
+        const theme = document.querySelector("#theme-link");
+
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+            // If the current URL contains "light-theme.css"
+            if (theme.getAttribute("href") == "{% static 'css/light.css' %}") {
+                // ... then switch it to "dark-theme.css"
+                theme.href = "{% static 'css/dark.css' %}";
+                // Otherwise...
+            } else {
+                // ... switch it to "light-theme.css"
+                theme.href = "{% static 'css/light.css' %}";
+            }
+        });
+    </script>
+
+    {% block extrahead %}
+    {% endblock extrahead %}
+</head>
+<body>
+<button class="btn-toggle">Кнопка смены темы</button>
+{% block content %}
+{% endblock %}
+</body>
+</html>
