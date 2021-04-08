@@ -1,10 +1,8 @@
-from django.urls import path, include
-from django.views.generic import TemplateView
+from django.urls import path
 
-
-from . import views
+from theme_switch.views import HomePageTemplateView, TestPageTemplateView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('test', TemplateView.as_view(template_name='test.html'), name='test'),
+    path('', HomePageTemplateView.as_view(), name='home'),
+    path('test', TestPageTemplateView.as_view(), name='test'),
 ]

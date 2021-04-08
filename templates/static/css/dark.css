@@ -2,9 +2,15 @@ p {
     color: white;
     font-size: 26pt;
 }
+
 body {
     background: black;
 }
+
 a {
     color: cyan;
+}
+
+h1 {
+    color: white;
 }
